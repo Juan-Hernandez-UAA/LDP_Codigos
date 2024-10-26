@@ -9,7 +9,7 @@ int main() {
     cout << "Dame un numero de 3 cifras: ";
     cin >> numero;
 
-    // Validar si el número tiene 3 cifras
+    // Validar si el numero tiene 3 cifras
     if(numero >= 100 && numero <= 999) {
         // Cálculo de centenas, decenas y unidades
         centenas = numero / 100;

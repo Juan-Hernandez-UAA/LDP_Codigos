@@ -5,7 +5,7 @@ using namespace std;
 
 bool esNumeroArmstrong(int numero) {
     int suma = 0;
-    int n = numero;  // Almacenar el número original para comparación
+    int n = numero;  // Almacenar el numero original para comparación
 
     while (n > 0) {
         int digito = n % 10;
