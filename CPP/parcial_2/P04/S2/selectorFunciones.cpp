@@ -8,7 +8,7 @@ int main() {
 
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
-    cout << "Dame el número de la funcion (1, 2 o 3): ";
+    cout << "Dame el numero de la funcion (1, 2 o 3): ";
     cin >> funcionSeleccionada;
 
     cout << "Dame el argumento de la funcion: ";
@@ -23,6 +23,11 @@ int main() {
         0
     );
 
-    cout << "El resultado es: " << resultado << endl;
+    if (funcionSeleccionada >= 1 && funcionSeleccionada <= 3) {
+        cout << "El resultado es: " << resultado << endl;
+    } else {
+        cout << "La funcion " << funcionSeleccionada << " no es una funcion";
+    }
+
     return 0;
 }

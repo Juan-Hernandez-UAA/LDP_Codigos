@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     double x1, x2, y1, y2, distancia;
 
-    cout << "Alumno: Juan Pablo Hernandez Ramirez" << end
+    cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
     cout << "Ingresa la posicion del punto x1: ";
     cin >> x1;
