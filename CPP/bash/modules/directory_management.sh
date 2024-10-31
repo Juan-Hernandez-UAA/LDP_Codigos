@@ -6,20 +6,22 @@ create_directories() {
     local folders_number=$2
     local destination_folder=$3
 
-    for ((i = 1; i <= folders_number; i++)); do
-        echo $(pwd)
+    source_file="./bash/templates/cpp.cpp"
+    file_name="main.cpp"
 
+    for ((i = 1; i <= folders_number; i++)); do
         directory_name="S$i"
         mkdir -p "$destination_folder/$directory_name" # Create the directory
 
-        # Update the progress bar
-        progress_bar $i $folders_number
+        clon_file="$destination_folder/$directory_name/$file_name"
 
         # Uncomment and customize this section if you want to create template files
         if [[ "$create_files" == true ]]; then
-            touch "$destination_folder/$directory_name/example.txt"
-            # Add your code to create template files here
+            cp "$source_file" "$clon_file"
         fi
+
+        # Update the progress bar
+        progress_bar $i $folders_number
     done
     echo -e "\nAll $folders_number directories created successfully!"
 }

@@ -21,7 +21,7 @@ progress_bar() {
     elif [[ $percent -lt 95 ]]; then
         color=$GREEN
     else
-        color=$BLUE
+        color=$CYAN
     fi
 
     printf "\r${color}[%s%s] %d%%\e[0m" "$bar" "$empty" "$percent"
