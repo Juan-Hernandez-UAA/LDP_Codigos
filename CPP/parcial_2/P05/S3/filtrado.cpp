@@ -1,8 +1,10 @@
 #include <iostream>
 
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     int suma = 0;
 
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;

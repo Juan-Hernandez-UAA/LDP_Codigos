@@ -15,8 +15,10 @@ bool esNumeroArmstrong(int numero) {
 
     return suma == numero;
 }
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     const int RANGO_INFERIOR = 100;
     const int RANGO_SUPERIOR = 999;
 

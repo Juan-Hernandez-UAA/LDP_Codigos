@@ -1,6 +1,11 @@
 #include <stdio.h>
+#include <cstdlib>
 
 int main() {
+    system("CLS");
+    printf("Alumno: Juan Pablo Hernandez Ramirez \n");
+
+
     int n1, n2, n3;
 
     printf("Introduzca primer numero (entero): ");

@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     const int velocidadLuz = 299792458; // Velocidad de la luz en metros por segundo
     string articulo;
 

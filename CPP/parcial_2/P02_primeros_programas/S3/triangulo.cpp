@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
     float b, h, l1, l2, l3, a, p;
@@ -21,9 +23,9 @@ int main() {
     cout << "Dame lado 3: ";
     cin >> l3;
 
-    // Proceso: cálculo del área y perímetro
+    // Proceso: cálculo del área y perImetro
     a = (b * h) / 2;  // Área del triángulo
-    p = l1 + l2 + l3;  // Perímetro del triángulo
+    p = l1 + l2 + l3;  // PerImetro del triángulo
 
     cout << "El area es: " << a << endl;
     cout << "El perimetro es: " << p << endl;

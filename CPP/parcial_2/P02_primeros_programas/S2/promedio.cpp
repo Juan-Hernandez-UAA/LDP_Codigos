@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
     float calificacion1, calificacion2, calificacion3, promedio;

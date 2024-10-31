@@ -3,8 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     double x1, x2, y1, y2, distancia;
 
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;

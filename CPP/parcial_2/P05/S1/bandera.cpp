@@ -1,8 +1,10 @@
 #include <iostream>
 
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     int n, valorSerie = 2;
 
     cout << "Juan Pablo Hernandez Ramirez" << endl;

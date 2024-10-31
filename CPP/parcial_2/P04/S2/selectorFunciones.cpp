@@ -1,8 +1,10 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     int funcionSeleccionada;
     double argumento, resultado;
 

@@ -1,8 +1,13 @@
 #include <stdio.h>
+#include <cstdlib>
 
 int main() {
+    system("CLS");
+    printf("Alumno: Juan Pablo Hernandez Ramirez \n");
+
+
     int numero;
-    
+
     printf("Introduzca numero del dado: ");
     scanf("%d", &numero);
 

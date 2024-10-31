@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
+#include <cstdlib>
 
 int main() {
+    system("CLS");
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
     int numero, centenas, decenas, unidades;

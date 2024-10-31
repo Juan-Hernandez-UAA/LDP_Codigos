@@ -1,6 +1,11 @@
 #include <stdio.h>
+#include <cstdlib>
 
 int main() {
+    system("CLS");
+    printf("Alumno: Juan Pablo Hernandez Ramirez \n");
+
+
     float altura, base;
 
     printf("Introduzca la base: ");
