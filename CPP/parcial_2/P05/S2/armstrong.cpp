@@ -5,11 +5,11 @@ using namespace std;
 
 bool esNumeroArmstrong(int numero) {
     int suma = 0;
-    int n = numero;  // Almacenar el numero original para comparación
+    int n = numero;  // Almacenar el numero original para comparacion
 
     while (n > 0) {
         int digito = n % 10;
-        suma += digito * digito * digito; // Optimización
+        suma += digito * digito * digito; // Optimizacion
         n /= 10;
     }
 

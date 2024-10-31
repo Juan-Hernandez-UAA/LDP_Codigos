@@ -5,7 +5,7 @@
  * Suggested filename:  main.cpp
  * Filename:            main.cpp
  * Author:              Juan Pablo Hernandez Ramirez
- * Date:                yyyy-mm-dd
+ * Date:                2024-10-31
  * Version:             1.0.0
  * Description:         lorem
  */
@@ -20,6 +20,17 @@ using namespace std;
 int main() {
     system("CLS"); // Clear console screen
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
+
+    int num, tabla;
+
+    // Solicitar un numero al usuario
+    printf("Escriba un numero: ");
+    scanf("%d", &num);
+
+    // Imprimir la tabla de multiplicar del numero ingresado
+    for (tabla = 1; tabla <= 10; tabla++) {
+        printf("%d x %d = %d\n", num, tabla, num * tabla);
+    }
 
     return 0;
 }

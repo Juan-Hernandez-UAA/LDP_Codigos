@@ -13,7 +13,7 @@ int main() {
 
     // Validar si el numero tiene 3 cifras
     if(numero >= 100 && numero <= 999) {
-        // Cálculo de centenas, decenas y unidades
+        // Calculo de centenas, decenas y unidades
         centenas = numero / 100;
         decenas = (numero % 100) / 10;
         unidades = numero % 10;

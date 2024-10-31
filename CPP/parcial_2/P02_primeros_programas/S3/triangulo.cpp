@@ -23,9 +23,9 @@ int main() {
     cout << "Dame lado 3: ";
     cin >> l3;
 
-    // Proceso: cálculo del área y perImetro
-    a = (b * h) / 2;  // Área del triángulo
-    p = l1 + l2 + l3;  // PerImetro del triángulo
+    // Proceso: calculo del area y perImetro
+    a = (b * h) / 2;  // area del triangulo
+    p = l1 + l2 + l3;  // PerImetro del triangulo
 
     cout << "El area es: " << a << endl;
     cout << "El perimetro es: " << p << endl;
