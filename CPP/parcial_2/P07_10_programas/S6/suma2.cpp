@@ -2,13 +2,11 @@
 +---------------------------------------------------+
 | Metadata                                          |
 +--------------------+------------------------------+
-| Practice name      | lorem                        |
-| Suggested filename | main.cpp                     |
-| Filename           | main.cpp                     |
+| Suggested filename | sumarDigitos_2.cpp            |
+| Filename           | suma2.cpp                    |
 | Author             | Juan Pablo Hernandez Ramirez |
 | Date               | 2024-10-31                   |
 | Version            | 1.0.0                        |
-| Description        | lorem                        |
 +--------------------+------------------------------+
 */
 
@@ -21,7 +19,7 @@ int main() {
     system("CLS"); // Clear console screen
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
-    int numero, suma;
+    int numero, _numero, suma;
     char resp = 's';
 
     do {
@@ -29,6 +27,8 @@ int main() {
 
         printf("Escriba un numero entero positivo: ");
         scanf("%d", &numero);
+
+        _numero = numero;
 
         if (numero < 10) {
             suma = numero;
@@ -40,7 +40,7 @@ int main() {
             }
         }
 
-        printf("La suma de las cifras del numero %d es: %d\n", numero, suma);
+        printf("La suma de las cifras del numero %d es: %d\n", _numero, suma);
 
         printf("Hacer otro calculo? (s/n): ");
         fflush(stdin);  // Limpiar buffer de entrada

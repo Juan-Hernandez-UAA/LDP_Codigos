@@ -2,13 +2,11 @@
 +---------------------------------------------------+
 | Metadata                                          |
 +--------------------+------------------------------+
-| Practice name      | lorem                        |
-| Suggested filename | main.cpp                     |
-| Filename           | main.cpp                     |
+| Suggested filename | convertirTemperatura.cpp     |
+| Filename           | tempe.cpp                    |
 | Author             | Juan Pablo Hernandez Ramirez |
 | Date               | 2024-10-31                   |
 | Version            | 1.0.0                        |
-| Description        | lorem                        |
 +--------------------+------------------------------+
 */
 

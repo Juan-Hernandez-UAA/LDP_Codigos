@@ -2,13 +2,11 @@
 +---------------------------------------------------+
 | Metadata                                          |
 +--------------------+------------------------------+
-| Practice name      | lorem                        |
-| Suggested filename | main.cpp                     |
-| Filename           | main.cpp                     |
+| Suggested filename | calcularSueldo.cpp           |
+| Filename           | calcHT.cpp                   |
 | Author             | Juan Pablo Hernandez Ramirez |
 | Date               | 2024-10-31                   |
 | Version            | 1.0.0                        |
-| Description        | lorem                        |
 +--------------------+------------------------------+
 */
 
@@ -72,6 +70,7 @@ int main() {
         printf("Calcular otro sueldo? (s/n): ");
         fflush(stdin); // limpiar el buffer de entrada
         resp = getchar();
+        printf("\n");
 
     } while (resp == 's' || resp == 'S');
 
