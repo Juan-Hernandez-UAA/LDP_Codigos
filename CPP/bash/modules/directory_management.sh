@@ -15,7 +15,6 @@ create_directories() {
 
         clon_file="$destination_folder/$directory_name/$file_name"
 
-        # Uncomment and customize this section if you want to create template files
         if [[ "$create_files" == true ]]; then
             cp "$source_file" "$clon_file"
         fi

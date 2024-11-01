@@ -25,5 +25,4 @@ progress_bar() {
     fi
 
     printf "\r${color}[%s%s] %d%%\e[0m" "$bar" "$empty" "$percent"
-    sleep 0.1
 }

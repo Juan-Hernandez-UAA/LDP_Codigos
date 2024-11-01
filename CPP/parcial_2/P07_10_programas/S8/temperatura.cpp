@@ -15,7 +15,6 @@
 #include <iostream>
 using namespace std;
 
-
 // --- Main execution ---
 int main() {
     system("CLS"); // Clear console screen
