@@ -1,15 +1,15 @@
 /*
----------------------------------------------------
-Metadata
----------------------------------------------------
-Practice name:       lorem
-Suggested filename:  main.cpp
-Filename:            main.cpp
-Author:              Juan Pablo Hernandez Ramirez
-Date:                2024-10-31
-Version:             1.0.0
-Description:         lorem
----------------------------------------------------
++---------------------------------------------------+
+| Metadata                                          |
++--------------------+------------------------------+
+| Practice name      | lorem                        |
+| Suggested filename | main.cpp                     |
+| Filename           | main.cpp                     |
+| Author             | Juan Pablo Hernandez Ramirez |
+| Date               | 2024-10-31                   |
+| Version            | 1.0.0                        |
+| Description        | lorem                        |
++--------------------+------------------------------+
 */
 
 #include <stdio.h>
@@ -21,22 +21,21 @@ int main() {
     system("CLS"); // Clear console screen
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
-    int contador = 1;
-    string contra;
+    int contra, contador = 1;
 
     while (contador <= 3) {
-        cout << "\nDame la contrasena: ";
-        cin >> contra;
+        printf("Dame la contrasena: ");
+        scanf("%d", &contra);
 
         // Verificacion de la contrasena
-        if (contra == "12345") {
-            cout << "Bienvenido\n";
-            break;  // Sale del ciclo si la contrasena es correcta
+        if (contra == 12345) {
+            printf("Bienvenido!\n");
+            break;
         } else {
             if (contador < 3) {
-                cout << "Error en la contrasena\n";
+                printf("Error en la contrasena\n\n");
             } else {
-                cout << "Oportunidades agotadas\n";
+                printf("Oportunidades agotadas\n");
             }
         }
 

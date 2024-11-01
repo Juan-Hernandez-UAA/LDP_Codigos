@@ -1,15 +1,15 @@
 /*
----------------------------------------------------
-Metadata
----------------------------------------------------
-Practice name:       lorem
-Suggested filename:  main.cpp
-Filename:            main.cpp
-Author:              Juan Pablo Hernandez Ramirez
-Date:                2024-10-31
-Version:             1.0.0
-Description:         lorem
----------------------------------------------------
++---------------------------------------------------+
+| Metadata                                          |
++--------------------+------------------------------+
+| Practice name      | lorem                        |
+| Suggested filename | main.cpp                     |
+| Filename           | main.cpp                     |
+| Author             | Juan Pablo Hernandez Ramirez |
+| Date               | 2024-10-31                   |
+| Version            | 1.0.0                        |
+| Description        | lorem                        |
++--------------------+------------------------------+
 */
 
 #include <stdio.h>
@@ -23,8 +23,6 @@ int main() {
 
     int numero, suma;
     char resp = 's';
-
-
 
     do {
         suma = 0;  // Inicializar el acumulador
@@ -42,10 +40,8 @@ int main() {
             }
         }
 
-        // Imprimir el resultado
-        printf("La suma de las cifras es: %d\n", suma);
+        printf("La suma de las cifras del numero %d es: %d\n", numero, suma);
 
-        // Preguntar si desea hacer otro calculo
         printf("Hacer otro calculo? (s/n): ");
         fflush(stdin);  // Limpiar buffer de entrada
         resp = getchar();

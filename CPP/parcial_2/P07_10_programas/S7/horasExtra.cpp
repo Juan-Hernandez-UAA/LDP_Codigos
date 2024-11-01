@@ -1,15 +1,15 @@
 /*
----------------------------------------------------
-Metadata
----------------------------------------------------
-Practice name:       lorem
-Suggested filename:  main.cpp
-Filename:            main.cpp
-Author:              Juan Pablo Hernandez Ramirez
-Date:                2024-10-31
-Version:             1.0.0
-Description:         lorem
----------------------------------------------------
++---------------------------------------------------+
+| Metadata                                          |
++--------------------+------------------------------+
+| Practice name      | lorem                        |
+| Suggested filename | main.cpp                     |
+| Filename           | main.cpp                     |
+| Author             | Juan Pablo Hernandez Ramirez |
+| Date               | 2024-10-31                   |
+| Version            | 1.0.0                        |
+| Description        | lorem                        |
++--------------------+------------------------------+
 */
 
 #include <stdio.h>
@@ -70,7 +70,7 @@ int main() {
 
         // Preguntar si desea calcular otro sueldo
         printf("Calcular otro sueldo? (s/n): ");
-        fflush(stdin);
+        fflush(stdin); // limpiar el buffer de entrada
         resp = getchar();
 
     } while (resp == 's' || resp == 'S');

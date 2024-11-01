@@ -1,15 +1,15 @@
 /*
----------------------------------------------------
-Metadata
----------------------------------------------------
-Practice name:       lorem
-Suggested filename:  main.cpp
-Filename:            main.cpp
-Author:              Juan Pablo Hernandez Ramirez
-Date:                2024-10-31
-Version:             1.0.0
-Description:         lorem
----------------------------------------------------
++---------------------------------------------------+
+| Metadata                                          |
++--------------------+------------------------------+
+| Practice name      | lorem                        |
+| Suggested filename | main.cpp                     |
+| Filename           | main.cpp                     |
+| Author             | Juan Pablo Hernandez Ramirez |
+| Date               | 2024-10-31                   |
+| Version            | 1.0.0                        |
+| Description        | lorem                        |
++--------------------+------------------------------+
 */
 
 #include <stdio.h>
@@ -25,28 +25,22 @@ int main() {
     char resp = 's';
 
     do {
-        // Reiniciar acumulador
         suma = 0;
 
-        // Solicitar un numero al usuario
         printf("Ingresa un numero entero positivo: ");
         scanf("%d", &numero);
 
-        // Validar si el numero es de un solo digito
         if (numero < 10) {
             suma = numero;
         } else {
-            // Calcular la suma de los digitos
             while (numero > 0) {
-                suma = suma + (numero % 10);  // Obtener el ultimo digito y sumarlo
-                numero = numero / 10;         // Eliminar el ultimo digito
+                suma = suma + (numero % 10);
+                numero = numero / 10;
             }
         }
 
-        // Mostrar el resultado de la suma de los digitos
         printf("La suma de las cifras del numero es: %d\n", suma);
 
-        // Preguntar si desea realizar otro calculo
         printf("Quieres hacer otro calculo? (s/n): ");
         fflush(stdin);  // Limpiar el buffer de entrada
         resp = getchar();

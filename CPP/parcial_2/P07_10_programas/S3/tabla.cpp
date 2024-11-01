@@ -1,15 +1,15 @@
 /*
----------------------------------------------------
-Metadata
----------------------------------------------------
-Practice name:       lorem
-Suggested filename:  main.cpp
-Filename:            main.cpp
-Author:              Juan Pablo Hernandez Ramirez
-Date:                2024-10-31
-Version:             1.0.0
-Description:         lorem
----------------------------------------------------
++---------------------------------------------------+
+| Metadata                                          |
++--------------------+------------------------------+
+| Practice name      | lorem                        |
+| Suggested filename | main.cpp                     |
+| Filename           | main.cpp                     |
+| Author             | Juan Pablo Hernandez Ramirez |
+| Date               | 2024-10-31                   |
+| Version            | 1.0.0                        |
+| Description        | lorem                        |
++--------------------+------------------------------+
 */
 
 #include <stdio.h>
@@ -23,11 +23,9 @@ int main() {
 
     int num, tabla;
 
-    // Solicitar un numero al usuario
     printf("Escriba un numero: ");
     scanf("%d", &num);
 
-    // Imprimir la tabla de multiplicar del numero ingresado
     for (tabla = 1; tabla <= 10; tabla++) {
         printf("%d x %d = %d\n", num, tabla, num * tabla);
     }
