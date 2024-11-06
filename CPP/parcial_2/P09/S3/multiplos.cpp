@@ -3,8 +3,8 @@
 | Metadata                                          |
 +--------------------+------------------------------+
 | Practice name      | lorem                        |
-| Suggested filename | imprimirTriangulo.cpp        |
-| Filename           | impresion.cpp                |
+| Suggested filename | main.cpp                     |
+| Filename           | main.cpp                     |
 | Author             | Juan Pablo Hernandez Ramirez |
 | Date               | 2024-10-31                   |
 | Version            | 1.0.0                        |
@@ -16,28 +16,30 @@
 #include <iostream>
 using namespace std;
 
-// --- Main execution ---
-int main() {
-    system("CLS"); // Clear console screen
+header() {
+    system("CLS");
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
-    char letra;
-    int numero, i;
+    return 0;
+}
 
+int main() {
+    header();
+    cout << endl;
 
-    printf("Ingresa una letra: ");
-    scanf(" %c", &letra);
+    int sumaMultiplos = 0;
 
-    printf("Ingresa un numero: ");
-    scanf("%d", &numero);
-
-    while (numero > 0) {
-        for (i = 0; i < numero; i++) {
-            printf("%c", letra);
+    for (int valorActual = 100; valorActual <= 200; valorActual++) {
+        if (valorActual % 5 == 0) {
+            sumaMultiplos += valorActual;
         }
-        printf("\n");  // Salto de linea
-        numero--;
+
+        cout << valorActual << (
+            (valorActual % 5 == 0) ? " -> Es multiplo de 5" : ""
+        ) << endl;
     }
+
+    cout << "\nLa suma de multiplos de 5 entre 100 y 200 es: " << sumaMultiplos << endl;
 
     return 0;
 }

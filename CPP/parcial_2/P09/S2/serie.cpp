@@ -3,8 +3,8 @@
 | Metadata                                          |
 +--------------------+------------------------------+
 | Practice name      | lorem                        |
-| Suggested filename | imprimirTriangulo.cpp        |
-| Filename           | impresion.cpp                |
+| Suggested filename | main.cpp                     |
+| Filename           | main.cpp                     |
 | Author             | Juan Pablo Hernandez Ramirez |
 | Date               | 2024-10-31                   |
 | Version            | 1.0.0                        |
@@ -12,32 +12,35 @@
 +--------------------+------------------------------+
 */
 
+
 #include <stdio.h>
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-// --- Main execution ---
-int main() {
-    system("CLS"); // Clear console screen
+header() {
+    system("CLS");
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 
-    char letra;
-    int numero, i;
+    return 0;
+}
 
+int main() {
+    header();
 
-    printf("Ingresa una letra: ");
-    scanf(" %c", &letra);
+    int limiteSerie;
+    float sumaSerie = 1.0, valorBase;
 
-    printf("Ingresa un numero: ");
-    scanf("%d", &numero);
+    cout << "Dame el valor de X: ";
+    cin >> valorBase;
+    cout << "Dame un numero limite: ";
+    cin >> limiteSerie;
 
-    while (numero > 0) {
-        for (i = 0; i < numero; i++) {
-            printf("%c", letra);
-        }
-        printf("\n");  // Salto de linea
-        numero--;
+    for (int indiceTermino = 1; indiceTermino <= limiteSerie; indiceTermino++) {
+        sumaSerie += 1 / pow(valorBase, indiceTermino);
     }
+
+    cout << "Resultado = " << sumaSerie << endl;
 
     return 0;
 }

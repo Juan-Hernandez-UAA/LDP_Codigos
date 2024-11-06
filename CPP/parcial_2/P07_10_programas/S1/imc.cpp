@@ -30,7 +30,7 @@ int main() {
         printf("Dame tu estatura en metros: ");
         scanf("%f", &estatura);
 
-        // Cálculo del IMC
+        // Calculo del IMC
         imc = peso / pow(estatura, 2);
 
         // Mostrar el IMC calculado
@@ -51,7 +51,7 @@ int main() {
 
         printf("\n");
 
-        // Preguntar si desea repetir el cálculo
+        // Preguntar si desea repetir el calculo
         printf("Deseas repetir la solucion? (s/n): ");
         fflush(stdin); // Limpiar el buffer de entrada
         resp = getchar();
