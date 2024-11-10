@@ -1,17 +1,3 @@
-/*
-+---------------------------------------------------+
-| Metadata                                          |
-+--------------------+------------------------------+
-| Practice name      | lorem                        |
-| Suggested filename | main.cpp                     |
-| Filename           | main.cpp                     |
-| Author             | Juan Pablo Hernandez Ramirez |
-| Date               | 2024-10-31                   |
-| Version            | 1.0.0                        |
-| Description        | lorem                        |
-+--------------------+------------------------------+
-*/
-
 #include <stdio.h>
 #include <iostream>
 using namespace std;
@@ -20,16 +6,16 @@ void imprimirEncabezado();
 void romano();
 
 int main() {
-    printf("Tu nombre aqui\n");
-    romano(); // Llamada a la función
+    imprimirEncabezado();
+    romano(); // Llamada a la funcion
     return 0;
 }
 
-imprimirEncabezado() {
+void imprimirEncabezado() {
     system("CLS");
     cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
 }
- 
+
 void romano() {
     int n, a, b, c, d, op = 1;
 
@@ -93,7 +79,14 @@ void romano() {
             printf("\nError en el numero...\n");
         }
 
+        // Pedir la opción y limpiar el buffer para evitar ciclos infinitos
         printf("\nDeseas repetir el programa si (1) no (2): ");
-        scanf("%d", &op);
+        if (scanf("%d", &op) != 1 || (op != 1 && op != 2)) {
+            printf("Entrada invalida. Terminando programa.\n");
+            break; // Sale del ciclo si la entrada no es válida
+        }
+
+        // Limpiar el buffer de entrada
+        while (getchar() != '\n');
     }
 }
