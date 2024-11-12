@@ -1,6 +1,7 @@
 #include <iostream>
-#include <iomanip> // Para setw()
 #include <string>
+#include <algorithm> // Para std::max
+#include <limits>    // Para std::numeric_limits
 using namespace std;
 
 // Definicion de colores
@@ -12,6 +13,7 @@ const string YELLOW = "\033[33m";
 const string BLUE = "\033[34m";
 const string CYAN = "\033[36m";
 
+// Constantes de precios
 const int PRECIO_CONTINENTAL = 110;
 const int PRECIO_MEDITERRANEO = 150;
 
@@ -19,6 +21,7 @@ const int PRECIO_MEDITERRANEO = 150;
 void imprimirEncabezado();
 void capturarNotas(int &totalContinentales, int &totalMediterraneos);
 void mostrarResumen(int totalContinentales, int totalMediterraneos);
+bool esNumeroPositivo(int &numero);
 
 int main() {
     imprimirEncabezado();
@@ -44,10 +47,26 @@ void capturarNotas(int &totalContinentales, int &totalMediterraneos) {
 
     do {
         cout << YELLOW << "\nCapturando nota de consumo:\n" << RESET;
-        cout << "Platillos de estilo continental vendidos: ";
-        cin >> cantContinentales;
-        cout << "Platillos de estilo mediterraneo vendidos: ";
-        cin >> cantMediterraneos;
+
+        // Validar cantidad de platillos continentales
+        do {
+            cout << "Cantidad de platillos continentales: ";
+            if (!(cin >> cantContinentales) || cantContinentales <= 0) {
+                cout << RED << "Por favor ingrese un numero positivo para los platillos continentales." << RESET << endl;
+                cin.clear(); // Limpiar el error de cin
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignorar el resto de la entrada
+            }
+        } while (cantContinentales <= 0);
+
+        // Validar cantidad de platillos mediterráneos
+        do {
+            cout << "Cantidad de platillos mediterraneos: ";
+            if (!(cin >> cantMediterraneos) || cantMediterraneos <= 0) {
+                cout << RED << "Por favor ingrese un numero positivo para los platillos mediterraneos." << RESET << endl;
+                cin.clear(); // Limpiar el error de cin
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignorar el resto de la entrada
+            }
+        } while (cantMediterraneos <= 0);
 
         // Sumar a los totales generales
         totalContinentales += cantContinentales;
@@ -63,46 +82,45 @@ void mostrarResumen(int totalContinentales, int totalMediterraneos) {
     int ingresosMediterraneos = totalMediterraneos * PRECIO_MEDITERRANEO;
     int totalIngresos = ingresosContinentales + ingresosMediterraneos;
 
-    // Alineando dinámicamente los encabezados y los datos
-    int maxLength = max(to_string(totalContinentales).length(), to_string(totalMediterraneos).length());
-    int ingresoLength = max(to_string(ingresosContinentales).length(), to_string(ingresosMediterraneos).length());
+    // Calcular el máximo espacio para alinear las columnas de manera dinámica
+    string strContinentales = to_string(totalContinentales);
+    string strMediterraneos = to_string(totalMediterraneos);
+    string strIngresosContinentales = to_string(ingresosContinentales);
+    string strIngresosMediterraneos = to_string(ingresosMediterraneos);
+    string strTotalIngresos = to_string(totalIngresos);
 
-    cout << "Resumen final:" << endl;
-    cout << "-------------------------------------------------" << endl;
+    // Longitud de las cadenas más largas
+    int maxPlatilloLength = max({16, (int)strContinentales.length(), (int)strMediterraneos.length()});
+    int maxIngresosLength = max({10, (int)strIngresosContinentales.length(), (int)strIngresosMediterraneos.length()});
 
-    // Encabezado con alineación
-    cout << left << setw(25) << "Platillos Continentales"
-         << setw(maxLength + 5) << "Total Unidades"
-         << setw(ingresoLength + 5) << "Subtotal" << endl;
+    // Imprimir encabezado con espacio calculado dinámicamente
+    cout << BOLD << "\nResumen final:" << RESET << endl;
+    cout << "-------------------------------------" << endl;
+    cout << "Platillo" << string(maxPlatilloLength - 8, ' ')
+         << "Cantidad" << string(maxIngresosLength - 8, ' ')
+         << "Subtotal" << endl;
+    cout << "-------------------------------------" << endl;
 
-    cout << left << setw(25) << "Platillos Mediterraneos"
-         << setw(maxLength + 5) << "Total Unidades"
-         << setw(ingresoLength + 5) << "Subtotal" << endl;
+    // Imprimir datos
+    cout << "Continental" << string(maxPlatilloLength - 11, ' ') << totalContinentales
+         << string(maxIngresosLength - strContinentales.length(), ' ')
+         << "$" << ingresosContinentales << endl;
 
-    cout << "-------------------------------------------------" << endl;
+    cout << "Mediterraneo" << string(maxPlatilloLength - 12, ' ') << totalMediterraneos
+         << string(maxIngresosLength - strMediterraneos.length(), ' ')
+         << "$" << ingresosMediterraneos << endl;
 
-    // Resultados con alineación dinámica
-    cout << left << setw(25) << "Total Continentales: "
-         << setw(maxLength + 5) << totalContinentales
-         << "$" << setw(ingresoLength + 5) << ingresosContinentales << endl;
+    cout << "-------------------------------------" << endl;
 
-    cout << left << setw(25) << "Total Mediterraneos: "
-         << setw(maxLength + 5) << totalMediterraneos
-         << "$" << setw(ingresoLength + 5) << ingresosMediterraneos << endl;
+    cout << BOLD << "Total: " << RESET
+         << string(maxPlatilloLength + maxIngresosLength - 7, ' ') << "$" << totalIngresos << endl;
 
-    cout << "\n-------------------------------------------------" << endl;
-
-    // Total de ingresos
-    cout << left << setw(25) << "Total de ingresos: "
-         << setw(ingresoLength + 5) << "$" << totalIngresos << endl;
-
-    // Platillo más consumido
-    cout << "Platillo mas consumido: ";
+    cout << BOLD << "Platillo mas consumido:   ";
     if (totalContinentales > totalMediterraneos) {
-        cout << "Continental" << endl;
+        cout << GREEN << "Continental" << RESET << endl;
     } else if (totalMediterraneos > totalContinentales) {
-        cout << "Mediterraneo" << endl;
+        cout << GREEN << "Mediterraneo" << RESET << endl;
     } else {
-        cout << "Ambos por igual" << endl;
+        cout << YELLOW << "Ambos por igual" << RESET << endl;
     }
 }

@@ -1,0 +1,6 @@
+[submodule "CPP/cpp/libraries/tabulate"]
+	path = CPP/cpp/libraries/tabulate
+	url = https://github.com/p-ranav/tabulate.git
+[submodule "cpp/libraries/tabulate"]
+	path = cpp/libraries/tabulate
+	url = https://github.com/p-ranav/tabulate.git
