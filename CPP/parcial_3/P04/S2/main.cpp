@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> // Para el uso de rand y srand
-#define TAM 5 // Para declarar constantes
+#define TAM 15 // Para declarar constantes
 
 /* Manejo de un vector establecido
 Su tamano con una constante */
