@@ -31,16 +31,17 @@ void llenarVector(int vec[], int tam) {
         Beep(888, 100);            // Sonido (A5)
         printf("%c ", 219);        // Imprime un cuadrado en pantalla
     }
-    printf("\n");
+    printf("\n%s", RESET);
 }
 
 // Funcion para imprimir el vector
 void imprimirVector(const int vec[], int tam) {
-    printf("%s\nEl vector generado es: [", YELLOW);
+    printf("\n%sVector llenado!", YELLOW);
+    printf("\nEl vector generado es: [");
     for (int i = 0; i < tam; i++) {
         printf("%d%s", vec[i], (i < tam - 1) ? ", " : "");
     }
-    printf("]\n");
+    printf("]\n%s", RESET);
 }
 
 // Funcion para encontrar el numero mas pequeño en el vector
@@ -56,7 +57,7 @@ int encontrarMenor(const int vec[], int tam) {
 
 // Funcion para mostrar los calculos de cuadrado y raiz cuadrada
 void calcularYMostrar(int vec[], int tam) {
-    printf("\n%sElevando cada numero al cuadrado y obteniendo raiz cuadrada:\n", RESET);
+    printf("\n%sVector tratado:\n%s", BOLD, RESET);
     printf("%-5s %-10s %-10s\n", "No.", "Cuadrado", "Raiz cuadrada");
     for (int i = 0; i < tam; i++) {
         double cuadrado = pow(vec[i], 2);
@@ -87,9 +88,11 @@ void buscarNumero(const int vec[], int tam) {
             printf("El numero %d %sno%s esta en el vector.\n", numero, RED, RESET);
         }
 
+        // Limpiar el buffer después de scanf
+        while (getchar() != '\n'); // Descarta cualquier caracter sobrante en el buffer
+
         printf("Buscar otro numero en el vector? (s/n): ");
-        fflush(stdin);
-        respuesta = getchar();
+        scanf("%c", &respuesta);
     } while (respuesta == 's' || respuesta == 'S');
 }
 
@@ -102,7 +105,7 @@ int main() {
     imprimirVector(vec, TAM);
 
     int menor = encontrarMenor(vec, TAM);
-    printf("%sEl numero mas chico en el vector es: %d\n", RESET, menor);
+    printf("%s\nEl numero %smas chico%s en el vector es: %d\n", RESET, GREEN, RESET, menor);
 
     calcularYMostrar(vec, TAM);
     buscarNumero(vec, TAM);

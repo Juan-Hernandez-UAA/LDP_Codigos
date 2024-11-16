@@ -64,6 +64,9 @@ int main() {
     float maxima = temperaturaMaxima(temperaturas);
     cout << "* La temperatura mas alta registrada fue: " << maxima << " C" RESET << endl;
 
+    // Temperatura promedio
+    cout << "* La temperatura promedio es: " << promedio << " C" << endl;
+
     // Encima promedio
     int diasEncimaPromedio = diasPorEncimaPromedio(temperaturas, promedio);
     cout << "* " << diasEncimaPromedio << " dias estuvieron por encima de la temperatura promedio.\n" << RESET;
