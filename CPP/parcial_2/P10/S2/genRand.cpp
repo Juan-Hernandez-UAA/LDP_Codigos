@@ -24,7 +24,7 @@ int imprimirEncabezado() {
     return 0;
 }
 
-// Función para obtener el número de valores a generar
+// Funcion para obtener el numero de valores a generar
 int obtenerNumeroDeValores() {
     int n;
     while (true) {
@@ -41,12 +41,12 @@ int obtenerNumeroDeValores() {
     return n;
 }
 
-// Función para generar un número aleatorio en el rango de 50 a 250
+// Funcion para generar un numero aleatorio en el rango de 50 a 250
 int generarNumeroAleatorio() {
     return 50 + rand() % (250 - 50 + 1);
 }
 
-// Función para procesar los números aleatorios generados y calcular la suma
+// Funcion para procesar los numeros aleatorios generados y calcular la suma
 void procesarNumeros(int cantidad) {
     int sumaMultiplosDe3 = 0;
     cout << "\n--- Numeros generados ---" << endl;
@@ -62,7 +62,7 @@ void procesarNumeros(int cantidad) {
     cout << "\nSuma de numeros multiplos de 3 y menores que 125: " << sumaMultiplosDe3 << endl;
 }
 
-// Función para preguntar al usuario si desea repetir el proceso
+// Funcion para preguntar al usuario si desea repetir el proceso
 bool deseaRepetir() {
     char respuesta;
     while (true) {
@@ -81,15 +81,15 @@ bool deseaRepetir() {
 int main() {
     imprimirEncabezado();
 
-    srand(static_cast<unsigned int>(time(0))); // Inicializar la semilla para los números aleatorios
+    srand(static_cast<unsigned int>(time(0))); // Inicializar la semilla para los numeros aleatorios
 
     cout << "Bienvenido al programa de generacion de numeros aleatorios" << endl;
 
     do {
-        // Obtener el número de valores a generar
+        // Obtener el numero de valores a generar
         int cantidad = obtenerNumeroDeValores();
 
-        // Procesar los números generados
+        // Procesar los numeros generados
         procesarNumeros(cantidad);
 
     } while (deseaRepetir());

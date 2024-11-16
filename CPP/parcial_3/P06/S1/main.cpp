@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// Definición de colores
+// Definicion de colores
 #define BOLD    "\033[1m"
 #define RESET   "\033[0m"
 #define RED     "\033[31m"

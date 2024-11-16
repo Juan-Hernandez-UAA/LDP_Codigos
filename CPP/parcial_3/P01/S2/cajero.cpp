@@ -8,7 +8,7 @@ void imprimirEncabezado();
 int main() {
     imprimirEncabezado();
     printf("Tu nombre aqui\n");
-    cajero(); // Llamada a la función
+    cajero(); // Llamada a la funcion
     return 0;
 }
 

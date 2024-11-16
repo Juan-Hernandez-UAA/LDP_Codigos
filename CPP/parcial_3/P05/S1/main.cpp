@@ -9,9 +9,9 @@ int main() {
     /* Declarando un vector de enteros
     de tamano TAM */
 
-    int vec1[TAM] = {1, 4, 2, 3, 7, 5, 8, 1, 0, 10}; // Asegúrate de declarar solo 5 elementos
+    int vec1[TAM] = {1, 4, 2, 3, 7, 5, 8, 1, 0, 10}; // Asegurate de declarar solo 5 elementos
     int vec2[TAM] = {0}; /* Cuando se quiere que todas las casillas del vector
-                            se inicien en 0, es suficiente poner un 0 así {0} */
+                            se inicien en 0, es suficiente poner un 0 asi {0} */
 
     int i; // Para usarse en el ciclo
 

@@ -16,9 +16,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    system("CLS"); // Clear console screen
-    cout << "Alumno: Juan Pablo Hernandez Ramirez" << endl;
+#define GREEN "\033[32m"
+#define BOLD "\033[1m"
+#define RESET "\033[0m"
 
+void imprimirEncabezado();
+
+int main() {
+    imprimirEncabezado();
     return 0;
+}
+
+void imprimirEncabezado(){
+    system("CLS"); // Clear console screen
+    cout << BOLD << GREEN << "Nombre de la practica" << RESET << endl;
+    cout << GREEN << "Alumno: Juan Pablo Hernandez Ramirez" << RESET << endl;
 }

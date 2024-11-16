@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Definición de colores
+// Definicion de colores
 #define BOLD    "\033[1m"
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
@@ -23,7 +23,7 @@ int main() {
 
     do {
         imprimirEncabezado();
-        srand(time(0));  // Inicializar la semilla para números aleatorios
+        srand(time(0));  // Inicializar la semilla para numeros aleatorios
         int n = rand() % 61 + 60;  // Generar n entre 60 y 120
         int numero;
 
@@ -39,7 +39,7 @@ int main() {
         cout << YELLOW << "Numeros generados: " << RESET;
 
         for (int i = 0; i < n; ++i) {
-            numero = rand() % 37;  // Generar número entre 0 y 36
+            numero = rand() % 37;  // Generar numero entre 0 y 36
             cout << numero << ", ";
 
             // Verificar si es cero
@@ -56,12 +56,12 @@ int main() {
                 totalImpares++;
             }
 
-            // Verificar si está en la 2da docena (13 a 24)
+            // Verificar si esta en la 2da docena (13 a 24)
             if (numero >= 13 && numero <= 24) {
                 cantidadDocena++;
             }
 
-            // Actualizar el número máximo
+            // Actualizar el numero maximo
             if (numero > maxNumero) {
                 maxNumero = numero;
             }

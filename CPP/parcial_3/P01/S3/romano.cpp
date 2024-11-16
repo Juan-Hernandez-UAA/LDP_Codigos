@@ -79,11 +79,11 @@ void romano() {
             printf("\nError en el numero...\n");
         }
 
-        // Pedir la opción y limpiar el buffer para evitar ciclos infinitos
+        // Pedir la opcion y limpiar el buffer para evitar ciclos infinitos
         printf("\nDeseas repetir el programa si (1) no (2): ");
         if (scanf("%d", &op) != 1 || (op != 1 && op != 2)) {
             printf("Entrada invalida. Terminando programa.\n");
-            break; // Sale del ciclo si la entrada no es válida
+            break; // Sale del ciclo si la entrada no es valida
         }
 
         // Limpiar el buffer de entrada

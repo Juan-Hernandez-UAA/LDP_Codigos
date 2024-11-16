@@ -17,8 +17,8 @@ int main()
     char resp;
     do
     {
-        capturarPalabra(); // Llamar a la función para capturar la palabra
-        repetir();         // Llamar a la función para repetir la palabra
+        capturarPalabra(); // Llamar a la funcion para capturar la palabra
+        repetir();         // Llamar a la funcion para repetir la palabra
 
         printf("\nQuieres imprimir de nuevo? (s/n): ");
         fflush(stdin);
@@ -28,7 +28,7 @@ int main()
     return 0;
 }
 
-// Función para capturar la palabra
+// Funcion para capturar la palabra
 void capturarPalabra()
 {
     cout << "dame una palabra: "; /* Hay muchos problemas con la manera en la que se lee originalmente
@@ -36,7 +36,7 @@ void capturarPalabra()
     cin >> palabra;
 }
 
-// Función para repetir la palabra
+// Funcion para repetir la palabra
 void repetir()
 {
     int veces; // Variable local
@@ -48,6 +48,6 @@ void repetir()
         for (int j = 1; j <= veces; j++) {
             printf("%s ", palabra);  // Imprime la palabra seguida de un espacio
         }
-        printf("\n");  // Salto de línea después de completar una fila
+        printf("\n");  // Salto de linea despues de completar una fila
     }
 }

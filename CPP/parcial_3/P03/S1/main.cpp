@@ -58,7 +58,7 @@ void capturarNotas(int &totalContinentales, int &totalMediterraneos) {
             }
         } while (cantContinentales <= 0);
 
-        // Validar cantidad de platillos mediterráneos
+        // Validar cantidad de platillos mediterraneos
         do {
             cout << "Cantidad de platillos mediterraneos: ";
             if (!(cin >> cantMediterraneos) || cantMediterraneos <= 0) {
@@ -82,18 +82,18 @@ void mostrarResumen(int totalContinentales, int totalMediterraneos) {
     int ingresosMediterraneos = totalMediterraneos * PRECIO_MEDITERRANEO;
     int totalIngresos = ingresosContinentales + ingresosMediterraneos;
 
-    // Calcular el máximo espacio para alinear las columnas de manera dinámica
+    // Calcular el maximo espacio para alinear las columnas de manera dinamica
     string strContinentales = to_string(totalContinentales);
     string strMediterraneos = to_string(totalMediterraneos);
     string strIngresosContinentales = to_string(ingresosContinentales);
     string strIngresosMediterraneos = to_string(ingresosMediterraneos);
     string strTotalIngresos = to_string(totalIngresos);
 
-    // Longitud de las cadenas más largas
+    // Longitud de las cadenas mas largas
     int maxPlatilloLength = max({16, (int)strContinentales.length(), (int)strMediterraneos.length()});
     int maxIngresosLength = max({10, (int)strIngresosContinentales.length(), (int)strIngresosMediterraneos.length()});
 
-    // Imprimir encabezado con espacio calculado dinámicamente
+    // Imprimir encabezado con espacio calculado dinamicamente
     cout << BOLD << "\nResumen final:" << RESET << endl;
     cout << "-------------------------------------" << endl;
     cout << "Platillo" << string(maxPlatilloLength - 8, ' ')

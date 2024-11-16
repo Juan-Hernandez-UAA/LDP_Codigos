@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: Compile and Run",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "main.cpp",
+                "modules/module1.cpp",
+                "modules/module2.cpp",
+                "modules/module3.cpp",
+                "-o", "output/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compiles and runs the C++ program"
+        },
+        {
+            "label": "C++: Run",
+            "type": "shell",
+            "command": "./output/main.exe",
+            "group": "test",
+            "dependsOn": "C++: Compile and Run"
+        }
+    ]
+}

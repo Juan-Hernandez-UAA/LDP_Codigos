@@ -9,7 +9,7 @@ int main() {
     char resp;
 
     do {
-        imprimeLetras(); // Llamar a la función
+        imprimeLetras(); // Llamar a la funcion
         printf("\n\nQuieres imprimir de nuevo? (s/n): ");
         fflush(stdin);
         scanf(" %c", &resp); // Es una forma de leer un char
@@ -19,9 +19,9 @@ int main() {
 } // fin main
 
 void imprimeLetras() {
-    // Usando la tabla de código ASCII
-    // Las mayusculas van del código 65 al 90
-    // Las minusculas van del código 97 al 122
+    // Usando la tabla de codigo ASCII
+    // Las mayusculas van del codigo 65 al 90
+    // Las minusculas van del codigo 97 al 122
     int op, ini, fin;
 
     printf("Selecciona: Mayusculas (1) Minusculas (2): ");

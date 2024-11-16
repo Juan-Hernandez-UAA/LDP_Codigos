@@ -37,18 +37,18 @@ int main() {
     int vec[TAM], i;
     double cua;  // Para guardar el resultado de pow
     double raiz; // Para guardar el resultado de sqrt
-    int n;       // Número a buscar en el vector
-    int menor;   // Número más chico en el vector
-    int band;    // Bandera para la búsqueda de un número
-    char resp;   // Para repetir la búsqueda de un número
+    int n;       // Numero a buscar en el vector
+    int menor;   // Numero mas chico en el vector
+    int band;    // Bandera para la busqueda de un numero
+    char resp;   // Para repetir la busqueda de un numero
 
-    // Semilla para números aleatorios
+    // Semilla para numeros aleatorios
     srand(time(0));
 
-    // Llenando el vector con números aleatorios entre 10 y 30
+    // Llenando el vector con numeros aleatorios entre 10 y 30
     printf("%s\nLlenando: ", GREEN);
     for (i = 0; i < TAM; i++) {
-        vec[i] = 10 + rand() % 21; // Genera número aleatorio entre 10 y 30
+        vec[i] = 10 + rand() % 21; // Genera numero aleatorio entre 10 y 30
         Sleep(100);                // Retardo de 100 ms
         Beep(500, 200);            // Sonido (frecuencia, tiempo)
         printf("%c ", 219);        // Imprime un cuadrado en pantalla
@@ -62,7 +62,7 @@ int main() {
     }
     printf("\n");
 
-    // Encontrar el número más chico en el vector
+    // Encontrar el numero mas chico en el vector
     menor = vec[0];
     for (i = 1; i < TAM; i++) {
         if (vec[i] < menor) {
@@ -71,16 +71,16 @@ int main() {
     }
     printf("El numero mas chico en el vector es: %d\n", menor);
 
-    // Elevar al cuadrado y sacar la raíz cuadrada de cada número del vector
+    // Elevar al cuadrado y sacar la raiz cuadrada de cada numero del vector
     printf("\nElevando cada numero al cuadrado y obteniendo raiz cuadrada:\n");
     printf("%-10s %-10s %-10s\n", "vec", "cuadrado", "raiz2");
     for (i = 0; i < TAM; i++) {
         cua = pow(vec[i], 2); // Elevamos usando pow
-        raiz = sqrt(vec[i]);  // Raíz cuadrada usando sqrt
+        raiz = sqrt(vec[i]);  // Raiz cuadrada usando sqrt
         printf("%-10d %-10.2f %-10.2f\n", vec[i], cua, raiz);
     }
 
-    // Buscar un número en el vector
+    // Buscar un numero en el vector
     do {
         printf("\n\nQue numero quieres buscar: ");
         scanf("%d", &n);
@@ -93,7 +93,7 @@ int main() {
             }
         }
 
-        // Checamos con qué valor quedó la bandera
+        // Checamos con que valor quedo la bandera
         if (band == 1) {
             printf("El numero %d SI esta en el vector.\n", n);
         } else {

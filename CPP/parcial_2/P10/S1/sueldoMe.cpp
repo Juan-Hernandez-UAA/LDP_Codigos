@@ -23,7 +23,7 @@ int imprimirEncabezado() {
     return 0;
 }
 
-// Función para obtener el numero de empleados, validando que sea mayor a 0
+// Funcion para obtener el numero de empleados, validando que sea mayor a 0
 int obtenerNumeroDeEmpleados() {
     int n;
     while (true) {
@@ -40,16 +40,16 @@ int obtenerNumeroDeEmpleados() {
     return n;
 }
 
-// Función para leer el nombre del empleado
+// Funcion para leer el nombre del empleado
 string obtenerNombre() {
     string nombre;
     cout << "Ingrese el nombre del empleado: ";
-    cin.ignore();  // Limpia el buffer para leer la línea completa
+    cin.ignore();  // Limpia el buffer para leer la linea completa
     getline(cin, nombre);
     return nombre;
 }
 
-// Función para leer y validar el sueldo del empleado
+// Funcion para leer y validar el sueldo del empleado
 double obtenerSueldo() {
     double sueldo;
     while (true) {
@@ -66,14 +66,14 @@ double obtenerSueldo() {
     return sueldo;
 }
 
-// Función principal que encuentra al empleado con el sueldo mas bajo
+// Funcion principal que encuentra al empleado con el sueldo mas bajo
 void encontrarEmpleadoConSueldoMinimo(int n) {
     string nombre, nombreMin;
     double sueldo, sueldoMin;
 
     cout << "\n--- Registro de empleados ---" << endl;
 
-    // Inicialización con el primer empleado
+    // Inicializacion con el primer empleado
     nombre = obtenerNombre();
     sueldo = obtenerSueldo();
     nombreMin = nombre;
